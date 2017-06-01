@@ -1,0 +1,13 @@
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\GRB.Business.Logic.dll.config
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\GRB.Business.Logic.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\GRB.Business.Logic.pdb
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\EncryptDecrypt.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\GRB.DataAccess.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\NextwaverDB.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\GRB.DataAccess.pdb
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\bin\Debug\GRB.DataAccess.dll.config
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\obj\Debug\GRB.Business.Logic.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\obj\Debug\GRB.Business.Logic.Properties.Resources.resources
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\obj\Debug\GRB.Business.Logic.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\obj\Debug\GRB.Business.Logic.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.Business.Logic\obj\Debug\GRB.Business.Logic.pdb

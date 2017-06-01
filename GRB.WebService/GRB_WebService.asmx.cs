@@ -41,10 +41,38 @@ namespace GRB.WebService
         [WebMethod]
         public bool SaveImagePage(Int32 BookNo, Int32 PageNo, Int32 Version, string ImgURL, string UserName, byte[] imageByte)
         {
+            System.Diagnostics.Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.RealTime;
+
             String PathXml = Server.MapPath("/tempdoc/Page.xml");
             if (!System.IO.File.Exists(PathXml))
                 PathXml = Server.MapPath("/GRBServices_ws/tempdoc/Page.xml");
-            return GRB_BizLog.GunRegistration.SaveImagePage(BookNo, PageNo, Version, ImgURL, PathXml, UserName, imageByte);
+
+            Boolean isSuccess = false;
+            Exception err = new Exception();
+            for (int index = 0; index < 5; index++)
+            {
+                try
+                {
+                    GRB_BizLog.GunRegistration.SaveImagePage(BookNo, PageNo, Version, ImgURL, PathXml, UserName, imageByte);
+                    isSuccess = true;
+                }
+                catch (Exception ex)
+                {
+                    err = ex;
+                    isSuccess = false;
+                }
+                if (isSuccess)
+                    break;
+                else
+                {
+                    System.Threading.Thread.Sleep(500);
+                }
+
+            }
+            if (!isSuccess)
+                throw new Exception("Error", err);
+
+            return true;
         }
 
         [WebMethod]
@@ -82,9 +110,9 @@ namespace GRB.WebService
         , string GunGroup, string GunType, string GunSize, string GunBrand, Int32 GunMaxShot, string GunBarrel, string GunColor
         , string GunOwner, string GunRegDate)
         {
-            return GRB_BizLog.GunRegistration.GetTblGunReg( BookNo,  PageNo,  PageVersion,  GunRegID,  GunNo
-    ,  GunGroup,  GunType,  GunSize,  GunBrand,  GunMaxShot,  GunBarrel,  GunColor
-    ,  GunOwner,  GunRegDate);
+            return GRB_BizLog.GunRegistration.GetTblGunReg(BookNo, PageNo, PageVersion, GunRegID, GunNo
+    , GunGroup, GunType, GunSize, GunBrand, GunMaxShot, GunBarrel, GunColor
+    , GunOwner, GunRegDate);
         }
 
         [WebMethod]
@@ -92,7 +120,7 @@ namespace GRB.WebService
         {
             try
             {
-                ProcessStartInfo processInfo = new ProcessStartInfo(@"C:\sdfsdfsdfsddfkgdfgtest\mybatch.bat");
+                ProcessStartInfo processInfo = new ProcessStartInfo(@"C:\test\mybatch.bat");
                 processInfo.CreateNoWindow = true;
                 processInfo.UseShellExecute = false;
                 Process process = Process.Start(processInfo);
@@ -103,7 +131,8 @@ namespace GRB.WebService
                 //}
                 return true;
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
         }

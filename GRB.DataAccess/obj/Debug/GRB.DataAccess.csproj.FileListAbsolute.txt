@@ -1,0 +1,8 @@
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\bin\Debug\GRB.DataAccess.dll.config
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\bin\Debug\GRB.DataAccess.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\bin\Debug\GRB.DataAccess.pdb
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.Properties.Resources.resources
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.dll
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.pdb

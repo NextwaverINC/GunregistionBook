@@ -299,8 +299,6 @@ namespace GRB.Business.Logic
                 throw ex;
             }
 
-
-
         }
 
         public static string convertDatetime(DateTime date)
@@ -383,7 +381,6 @@ namespace GRB.Business.Logic
             {
                 throw ex;
             }
-        }
-
+        }        
     }
 }
