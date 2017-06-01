@@ -1,0 +1,7 @@
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\obj\Debug\GRB.Console.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\bin\Debug\logBackUp\logDateBackup.txt
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\bin\Debug\GRB.Console.exe.config
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\bin\Debug\GRB.Console.exe
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\bin\Debug\GRB.Console.pdb
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\obj\Debug\GRB.Console.exe
+C:\Users\USER\Desktop\GunregistionBook\GRB.Console\obj\Debug\GRB.Console.pdb

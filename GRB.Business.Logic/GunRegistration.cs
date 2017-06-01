@@ -381,6 +381,18 @@ namespace GRB.Business.Logic
             {
                 throw ex;
             }
-        }        
+        }
+
+        public static DataTable GetDataGun(string DateBegin, string DateEnd, string pStatus)
+        {
+            try
+            {
+                return GRB_Dat.spGBGetTblData.ExecuteReader(DateBegin, DateEnd, pStatus);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

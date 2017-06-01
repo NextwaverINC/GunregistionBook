@@ -1,0 +1,7 @@
+C:\Users\USER\Desktop\GunregistionBook\Common\bin\Debug\Common.dll.config
+C:\Users\USER\Desktop\GunregistionBook\Common\bin\Debug\Common.dll
+C:\Users\USER\Desktop\GunregistionBook\Common\bin\Debug\Common.pdb
+C:\Users\USER\Desktop\GunregistionBook\Common\obj\Debug\Common.Properties.Resources.resources
+C:\Users\USER\Desktop\GunregistionBook\Common\obj\Debug\Common.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\GunregistionBook\Common\obj\Debug\Common.dll
+C:\Users\USER\Desktop\GunregistionBook\Common\obj\Debug\Common.pdb

@@ -116,6 +116,12 @@ namespace GRB.WebService
         }
 
         [WebMethod]
+        public DataTable GetDataGun(string DateBegin, string DateEnd, string pStatus)
+        {
+            return GRB_BizLog.GunRegistration.GetDataGun(DateBegin, DateEnd, pStatus);
+        }
+
+        [WebMethod]
         public bool RunBatBackupfile(int bookno)
         {
             try
