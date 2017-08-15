@@ -1,0 +1,49 @@
+﻿<Document ID="" Name="Page">
+  <Data>
+    <Section ID="1" Name="PageInfo" Type="STR">
+      <Items Name="Page" Type="FIX">
+        <Item Name="BookNo" Type="STR" Value="" />
+        <Item Name="PageNo" Type="STR" Value="" />
+        <Item Name="PageVersion" Type="STR" Value="" />
+        <Item Name="ImgUrl" Type="STR" Value="" />
+        <Item Name="PageStatus" Type="STR" Value="" />
+        <Item Name="ScanDate" Type="STR" Value="" />
+        <Item Name="ScanBy" Type="STR" Value="" />
+        <Item Name="DataEntryDate" Type="STR" Value="" />
+        <Item Name="DataEntryBy" Type="STR" Value="" />
+        <Item Name="SummitDate" Type="STR" Value="" />
+        <Item Name="SummitBy" Type="STR" Value="" />
+        <Item Name="ApproveDate" Type="STR" Value="" />
+        <Item Name="ApproveBy" Type="STR" Value="" />
+        <Item Name="CreateDate" Type="STR" Value="" />
+        <Item Name="CreateBy" Type="STR" Value="" />
+        <Item Name="UpdateDate" Type="STR" Value="" />
+        <Item Name="UpdateBy" Type="STR" Value="" />
+      </Items>
+    </Section>
+    <Section ID="2" Name="Record" Type="STR">
+      <Items Name="RecordInfo" Type="SEQ">
+        <Means Name="Record">
+          <Mean ID="C00" Name="GunRegID" Type="STR" Desc="ทะเบียนปืน" />
+          <Mean ID="C01" Name="GunNo" Type="STR" Desc="เลขหมายปืน" />
+          <Mean ID="C02" Name="GunGroup" Type="STR" Desc="สั้น/ยาว" />
+          <Mean ID="C03" Name="GunType" Type="STR" Desc="ชนิดอาวุธปืน" />
+          <Mean ID="C04" Name="GunSize" Type="STR" Desc="ขนาด" />
+          <Mean ID="C05" Name="GunBrand" Type="STR" Desc="ยี่ห้อ" />
+          <Mean ID="C06" Name="GunMaxShot" Type="STR" Desc="บรรจุ(นัด)" />
+          <Mean ID="C07" Name="GunBarrel" Type="STR" Desc="ความยาวลำกล้อง" />
+          <Mean ID="C08" Name="GunColor" Type="STR" Desc="สีปืน" />
+          <Mean ID="C09" Name="GunOwner" Type="STR" Desc="เจ้าของปืน" />
+          <Mean ID="C10" Name="GunLottotal" Type="STR" Desc="จำนวน" />
+          <Mean ID="C11" Name="GunRemark" Type="STR" Desc="หมายเหตุ" />
+          <Mean ID="C12" Name="GunRegDate" Type="STR" Desc="วันที่ลงทะเบียน" />
+          <Mean ID="C13" Name="GunCountry" Type="STR" Desc="ประเทศนำเข้า" />
+          <Mean ID="C14" Name="CreateDate" Type="STR" Desc="" />
+          <Mean ID="C15" Name="CreateBy" Type="STR" Desc="" />
+          <Mean ID="C16" Name="UpdateDate" Type="STR" Desc="" />
+          <Mean ID="C17" Name="UpdateBy" Type="STR" Desc="" />
+        </Means>
+      </Items>
+    </Section>
+  </Data>
+</Document>

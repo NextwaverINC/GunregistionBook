@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Drawing;
 using System.IO;
+using System.Drawing.Imaging;
 
 namespace GRB.Business.Logic
 {
@@ -39,7 +40,7 @@ namespace GRB.Business.Logic
                 System.IO.File.Delete(ImagePath);
             }
 
-            ImageData.Save(ImagePath);
+            ImageData.Save(ImagePath,ImageFormat.Jpeg);
 
             return true;
         }

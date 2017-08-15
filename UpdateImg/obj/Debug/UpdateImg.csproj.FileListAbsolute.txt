@@ -1,0 +1,10 @@
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\log.txt
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\UpdateImg.exe.config
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\UpdateImg.exe
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\UpdateImg.pdb
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\EncryptDecrypt.dll
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\NextwaverDB.dll
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\bin\Debug\NextwaverDB.pdb
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\obj\Debug\UpdateImg.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\obj\Debug\UpdateImg.exe
+C:\Users\USER\Desktop\GunregistionBook\UpdateImg\obj\Debug\UpdateImg.pdb

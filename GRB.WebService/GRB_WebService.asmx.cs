@@ -27,6 +27,12 @@ namespace GRB.WebService
         }
 
         [WebMethod]
+        public DataTable GetBookByCondition(Int32 BookNo, Int32 BookYear)
+        {
+            return GRB_BizLog.GunRegistration.GetBookByCondition(BookNo, BookYear);
+        }
+
+        [WebMethod]
         public DataTable GetPage(Int32 BookNo, Int32 PageNo)
         {
             return GRB_BizLog.GunRegistration.GetPage(BookNo, PageNo);
@@ -99,7 +105,6 @@ namespace GRB.WebService
             return GRB_BizLog.GunRegistration.getimg(BookNo, PageNo, PageVer);
         }
 
-        [WebMethod]
         public bool EditPathImg(int bookno)
         {
             return GRB_BizLog.GunRegistration.EditPageImg(bookno);
@@ -108,17 +113,23 @@ namespace GRB.WebService
         [WebMethod]
         public DataTable GetTblGunReg(Int32 BookNo, Int32 PageNo, Int32 PageVersion, string GunRegID, string GunNo
         , string GunGroup, string GunType, string GunSize, string GunBrand, Int32 GunMaxShot, string GunBarrel, string GunColor
-        , string GunOwner, string GunRegDate)
+        , string GunOwner, string GunRegDate, string GunRemark, string GunCountry)
         {
             return GRB_BizLog.GunRegistration.GetTblGunReg(BookNo, PageNo, PageVersion, GunRegID, GunNo
     , GunGroup, GunType, GunSize, GunBrand, GunMaxShot, GunBarrel, GunColor
-    , GunOwner, GunRegDate);
+    , GunOwner, GunRegDate, GunRemark, GunCountry);
         }
 
         [WebMethod]
         public DataTable GetDataGun(string DateBegin, string DateEnd, string pStatus)
         {
             return GRB_BizLog.GunRegistration.GetDataGun(DateBegin, DateEnd, pStatus);
+        }
+
+        [WebMethod]
+        public DataTable GetDataGunSum(string DateBegin, string DateEnd, string pStatus)
+        {
+            return GRB_BizLog.GunRegistration.GetDataGunSum(DateBegin, DateEnd, pStatus);
         }
 
         [WebMethod]
@@ -129,6 +140,7 @@ namespace GRB.WebService
                 ProcessStartInfo processInfo = new ProcessStartInfo(@"C:\test\mybatch.bat");
                 processInfo.CreateNoWindow = true;
                 processInfo.UseShellExecute = false;
+                processInfo.Arguments = "";
                 Process process = Process.Start(processInfo);
                 //process.WaitForExit();
                 //if (process.ExitCode == 0)
@@ -141,6 +153,31 @@ namespace GRB.WebService
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        [WebMethod]
+        public void logUser(string UserName, string MenuUse, string UserProcess, bool ProcessResult, string strList)
+        {
+            try
+            {
+                GRB_BizLog.GunRegistration.logUserGun(UserName, MenuUse, UserProcess, ProcessResult, strList);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        [WebMethod]
+        public byte[] getPDF(string pathPDF)
+        {
+            return GRB_BizLog.GunRegistration.getPdf(pathPDF);
+        }
+
+        [WebMethod]
+        public bool updatePercentErrImg(Int32 BookNo, Int32 PageNo, decimal PercentErr)
+        {
+            return GRB_BizLog.GunRegistration.updatePercentErr(BookNo, PageNo, PercentErr);
         }
     }
 }

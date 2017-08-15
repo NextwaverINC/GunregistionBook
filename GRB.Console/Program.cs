@@ -11,13 +11,7 @@ namespace GRB.Console
     {
         static void Main(string[] args)
         {
-            //if (args.Length == 0)
-            //{
-            //    args = new string[3];
-            //    args[0] = "BACKUPDATA";
-            //    args[1] = System.Configuration.ConfigurationSettings.AppSettings["sourceDir"];
-            //    args[2] = System.Configuration.ConfigurationSettings.AppSettings["backupDir"];
-            //}
+
             if (args.Length > 0)
             {
                 if (args[0].ToUpper() == "BACKUPDATA")
@@ -25,6 +19,12 @@ namespace GRB.Console
                     System.Console.WriteLine("BackUp Data");
                     BackUpDoc.BackupDocument bk = new BackUpDoc.BackupDocument();
                     bk.BackupDocumentData(args);
+                }
+                if (args[0].ToUpper() == "GENPDF")
+                {
+                    System.Console.WriteLine("Generate PDF");
+                    GenImgToPdf.GenImgToPdf gp = new GenImgToPdf.GenImgToPdf();
+                    gp.GenPdf(args);
                 }
                 else
                 {

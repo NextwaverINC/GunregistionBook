@@ -1,0 +1,9 @@
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\bin\Debug\ConsoleUpdateSave.exe.config
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\bin\Debug\ConsoleUpdateSave.exe
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\bin\Debug\ConsoleUpdateSave.pdb
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\bin\Debug\EncryptDecrypt.dll
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\bin\Debug\NextwaverDB.dll
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\bin\Debug\NextwaverDB.pdb
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\obj\Debug\ConsoleUpdateSave.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\obj\Debug\ConsoleUpdateSave.exe
+C:\Users\USER\Desktop\GunregistionBook\ConsoleUpdateSave\obj\Debug\ConsoleUpdateSave.pdb

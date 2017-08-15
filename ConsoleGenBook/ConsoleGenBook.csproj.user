@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartArguments>bookno=102&amp;bookyear=2519&amp;gunregidstart=58001&amp;gunregidend=66000&amp;pagetotal=400&amp;gunregidprefix=19-</StartArguments>
+  </PropertyGroup>
+</Project>

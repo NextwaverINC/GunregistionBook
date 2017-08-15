@@ -68,7 +68,6 @@ namespace GRB.Console.BackUpDoc
                     + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + " :: " + ex.Message);
             }
 
-
         }
     }
 }

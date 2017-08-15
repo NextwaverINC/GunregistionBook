@@ -1,0 +1,12 @@
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\log.txt
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\file.txt
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\tempdoc\Book.xml
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\tempdoc\Page.xml
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\ConsoleGenBook.exe.config
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\ConsoleGenBook.exe
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\ConsoleGenBook.pdb
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\EncryptDecrypt.dll
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\NextwaverDB.dll
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\bin\Debug\NextwaverDB.pdb
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\obj\Debug\ConsoleGenBook.exe
+C:\Users\USER\Desktop\GunregistionBook\ConsoleGenBook\obj\Debug\ConsoleGenBook.pdb

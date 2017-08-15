@@ -11,7 +11,7 @@ namespace GRB.DataAccess
 
         public static DataTable ExecuteReader(Int32 BookNo, Int32 PageNo, Int32 PageVersion, string GunRegID, string GunNo
     , string GunGroup, string GunType, string GunSize, string GunBrand, Int32 GunMaxShot, string GunBarrel, string GunColor
-    , string GunOwner, string GunRegDate)
+    , string GunOwner, string GunRegDate, string GunRemark, string GunCountry)
         {
             SqlParameter Param_BookNo = new SqlParameter("@BookNo", BookNo);
             SqlParameter Param_PageNo = new SqlParameter("@PageNo", PageNo);
@@ -28,10 +28,12 @@ namespace GRB.DataAccess
             SqlParameter Param_GunColor = new SqlParameter("@GunColor", GunColor);
             SqlParameter Param_GunOwner = new SqlParameter("@GunOwner", GunOwner);
             SqlParameter Param_GunRegDate = new SqlParameter("@GunRegDate", GunRegDate);
+            SqlParameter Param_GunRemark = new SqlParameter("@GunRemark", GunRemark);
+            SqlParameter Param_GunCountry = new SqlParameter("@GunCountry", GunCountry);
 
             return (DataTable)GRB_Dat.DBExecute.ExecuteProcedureReader(_Procedure_Name, false, Param_BookNo, Param_PageNo, Param_PageVersion
                 , Param_GunRegID, Param_GunNo, Param_GunGroup, Param_GunType, Param_GunSize, Param_GunBrand, Param_GunMaxShot, Param_GunBarrel
-                , Param_GunColor, Param_GunOwner, Param_GunRegDate);
+                , Param_GunColor, Param_GunOwner, Param_GunRegDate, Param_GunRemark, Param_GunCountry);
         }
     }
 }

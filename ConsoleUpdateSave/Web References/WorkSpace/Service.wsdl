@@ -1,0 +1,1241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getError">
+        <s:complexType />
+      </s:element>
+      <s:element name="getErrorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getErrorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setPath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PathStore" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setPathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setPathResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setWorkspaceConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWorkspace" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setWorkspaceConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setWorkspaceConfigResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentByVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentByVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentByVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOfficeSpace">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateOfficeSpaceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateOfficeSpaceResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveDocumentNoSent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDocument" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentNoSentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveDocumentNoSentResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDocument" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveDocumentResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_Version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocument_LastVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocument_LastVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocument_LastVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDatabase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateDatabaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateDatabaseResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTableResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateColumn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ColumnName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NCType" type="tns:NColumnType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="NColumnType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="Xml" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="Varchar" />
+          <s:enumeration value="Datetime" />
+          <s:enumeration value="Decimal" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateColumnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateColumnResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NColumns_String" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDOC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NColumns_String" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NWheres_String" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDOC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDataResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectByColumnAndWhere">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NColumns_encrypt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NWheres_encrypt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectByColumnAndWhereResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectByColumnAndWhereResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllColumnByWhere">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NWheres_String" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllColumnByWhereResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllColumnByWhereResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllByColumn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NColumns_String" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllByColumnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllByColumnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateTableResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLastDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectLastDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectLastDocumentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRootCV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRootCVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRootCVResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDirctoryInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDirctoryInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDirctoryInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDirctoryList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDirctoryListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDirctoryListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFileList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFileListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFileNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transform">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OfficeSpaceId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DatabaseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isTransformDoc" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransformResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransformResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:getError" />
+  </wsdl:message>
+  <wsdl:message name="getErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:getErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="setPathSoapIn">
+    <wsdl:part name="parameters" element="tns:setPath" />
+  </wsdl:message>
+  <wsdl:message name="setPathSoapOut">
+    <wsdl:part name="parameters" element="tns:setPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="setWorkspaceConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:setWorkspaceConfig" />
+  </wsdl:message>
+  <wsdl:message name="setWorkspaceConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:setWorkspaceConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentByVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentByVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentByVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentByVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateOfficeSpaceSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateOfficeSpace" />
+  </wsdl:message>
+  <wsdl:message name="CreateOfficeSpaceSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateOfficeSpaceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentNoSentSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocumentNoSent" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentNoSentSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentNoSentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocument" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocument_LastVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocument_LastVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetDocument_LastVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocument_LastVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateDatabaseSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateDatabase" />
+  </wsdl:message>
+  <wsdl:message name="CreateDatabaseSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTableSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTable" />
+  </wsdl:message>
+  <wsdl:message name="CreateTableSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateColumnSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateColumn" />
+  </wsdl:message>
+  <wsdl:message name="CreateColumnSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateColumnResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertData" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectByColumnAndWhereSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectByColumnAndWhere" />
+  </wsdl:message>
+  <wsdl:message name="SelectByColumnAndWhereSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectByColumnAndWhereResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllColumnByWhereSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAllColumnByWhere" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllColumnByWhereSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAllColumnByWhereResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllByColumnSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAllByColumn" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllByColumnSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAllByColumnResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectAll" />
+  </wsdl:message>
+  <wsdl:message name="SelectAllSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateTableSoapIn">
+    <wsdl:part name="parameters" element="tns:updateTable" />
+  </wsdl:message>
+  <wsdl:message name="updateTableSoapOut">
+    <wsdl:part name="parameters" element="tns:updateTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectLastDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectLastDocument" />
+  </wsdl:message>
+  <wsdl:message name="SelectLastDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectLastDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRootCVSoapIn">
+    <wsdl:part name="parameters" element="tns:getRootCV" />
+  </wsdl:message>
+  <wsdl:message name="getRootCVSoapOut">
+    <wsdl:part name="parameters" element="tns:getRootCVResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDirctoryInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getDirctoryInfo" />
+  </wsdl:message>
+  <wsdl:message name="getDirctoryInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getDirctoryInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDirctoryListSoapIn">
+    <wsdl:part name="parameters" element="tns:getDirctoryList" />
+  </wsdl:message>
+  <wsdl:message name="getDirctoryListSoapOut">
+    <wsdl:part name="parameters" element="tns:getDirctoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:getFileList" />
+  </wsdl:message>
+  <wsdl:message name="getFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:getFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:getFileName" />
+  </wsdl:message>
+  <wsdl:message name="getFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:getFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransformSoapIn">
+    <wsdl:part name="parameters" element="tns:Transform" />
+  </wsdl:message>
+  <wsdl:message name="TransformSoapOut">
+    <wsdl:part name="parameters" element="tns:TransformResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="getError">
+      <wsdl:input message="tns:getErrorSoapIn" />
+      <wsdl:output message="tns:getErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setPath">
+      <wsdl:input message="tns:setPathSoapIn" />
+      <wsdl:output message="tns:setPathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setWorkspaceConfig">
+      <wsdl:input message="tns:setWorkspaceConfigSoapIn" />
+      <wsdl:output message="tns:setWorkspaceConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentByVersion">
+      <wsdl:input message="tns:GetDocumentByVersionSoapIn" />
+      <wsdl:output message="tns:GetDocumentByVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentVersion">
+      <wsdl:input message="tns:GetDocumentVersionSoapIn" />
+      <wsdl:output message="tns:GetDocumentVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOfficeSpace">
+      <wsdl:input message="tns:CreateOfficeSpaceSoapIn" />
+      <wsdl:output message="tns:CreateOfficeSpaceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentNoSent">
+      <wsdl:input message="tns:SaveDocumentNoSentSoapIn" />
+      <wsdl:output message="tns:SaveDocumentNoSentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <wsdl:input message="tns:SaveDocumentSoapIn" />
+      <wsdl:output message="tns:SaveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument_LastVersion">
+      <wsdl:input message="tns:GetDocument_LastVersionSoapIn" />
+      <wsdl:output message="tns:GetDocument_LastVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDatabase">
+      <wsdl:input message="tns:CreateDatabaseSoapIn" />
+      <wsdl:output message="tns:CreateDatabaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTable">
+      <wsdl:input message="tns:CreateTableSoapIn" />
+      <wsdl:output message="tns:CreateTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateColumn">
+      <wsdl:input message="tns:CreateColumnSoapIn" />
+      <wsdl:output message="tns:CreateColumnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertData">
+      <wsdl:input message="tns:InsertDataSoapIn" />
+      <wsdl:output message="tns:InsertDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <wsdl:input message="tns:UpdateDataSoapIn" />
+      <wsdl:output message="tns:UpdateDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectByColumnAndWhere">
+      <wsdl:input message="tns:SelectByColumnAndWhereSoapIn" />
+      <wsdl:output message="tns:SelectByColumnAndWhereSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllColumnByWhere">
+      <wsdl:input message="tns:SelectAllColumnByWhereSoapIn" />
+      <wsdl:output message="tns:SelectAllColumnByWhereSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllByColumn">
+      <wsdl:input message="tns:SelectAllByColumnSoapIn" />
+      <wsdl:output message="tns:SelectAllByColumnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <wsdl:input message="tns:SelectAllSoapIn" />
+      <wsdl:output message="tns:SelectAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTable">
+      <wsdl:input message="tns:updateTableSoapIn" />
+      <wsdl:output message="tns:updateTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLastDocument">
+      <wsdl:input message="tns:SelectLastDocumentSoapIn" />
+      <wsdl:output message="tns:SelectLastDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRootCV">
+      <wsdl:input message="tns:getRootCVSoapIn" />
+      <wsdl:output message="tns:getRootCVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDirctoryInfo">
+      <wsdl:input message="tns:getDirctoryInfoSoapIn" />
+      <wsdl:output message="tns:getDirctoryInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDirctoryList">
+      <wsdl:input message="tns:getDirctoryListSoapIn" />
+      <wsdl:output message="tns:getDirctoryListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFileList">
+      <wsdl:input message="tns:getFileListSoapIn" />
+      <wsdl:output message="tns:getFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFileName">
+      <wsdl:input message="tns:getFileNameSoapIn" />
+      <wsdl:output message="tns:getFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transform">
+      <wsdl:input message="tns:TransformSoapIn" />
+      <wsdl:output message="tns:TransformSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getError">
+      <soap:operation soapAction="http://tempuri.org/getError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPath">
+      <soap:operation soapAction="http://tempuri.org/setPath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setWorkspaceConfig">
+      <soap:operation soapAction="http://tempuri.org/setWorkspaceConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentByVersion">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentByVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentVersion">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOfficeSpace">
+      <soap:operation soapAction="http://tempuri.org/CreateOfficeSpace" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentNoSent">
+      <soap:operation soapAction="http://tempuri.org/SaveDocumentNoSent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument_LastVersion">
+      <soap:operation soapAction="http://tempuri.org/GetDocument_LastVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDatabase">
+      <soap:operation soapAction="http://tempuri.org/CreateDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTable">
+      <soap:operation soapAction="http://tempuri.org/CreateTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateColumn">
+      <soap:operation soapAction="http://tempuri.org/CreateColumn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertData">
+      <soap:operation soapAction="http://tempuri.org/InsertData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap:operation soapAction="http://tempuri.org/UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectByColumnAndWhere">
+      <soap:operation soapAction="http://tempuri.org/SelectByColumnAndWhere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllColumnByWhere">
+      <soap:operation soapAction="http://tempuri.org/SelectAllColumnByWhere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllByColumn">
+      <soap:operation soapAction="http://tempuri.org/SelectAllByColumn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap:operation soapAction="http://tempuri.org/SelectAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTable">
+      <soap:operation soapAction="http://tempuri.org/updateTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLastDocument">
+      <soap:operation soapAction="http://tempuri.org/SelectLastDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRootCV">
+      <soap:operation soapAction="http://tempuri.org/getRootCV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDirctoryInfo">
+      <soap:operation soapAction="http://tempuri.org/getDirctoryInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDirctoryList">
+      <soap:operation soapAction="http://tempuri.org/getDirctoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFileList">
+      <soap:operation soapAction="http://tempuri.org/getFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFileName">
+      <soap:operation soapAction="http://tempuri.org/getFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transform">
+      <soap:operation soapAction="http://tempuri.org/Transform" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getError">
+      <soap12:operation soapAction="http://tempuri.org/getError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPath">
+      <soap12:operation soapAction="http://tempuri.org/setPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setWorkspaceConfig">
+      <soap12:operation soapAction="http://tempuri.org/setWorkspaceConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentByVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentByVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOfficeSpace">
+      <soap12:operation soapAction="http://tempuri.org/CreateOfficeSpace" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentNoSent">
+      <soap12:operation soapAction="http://tempuri.org/SaveDocumentNoSent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocument">
+      <soap12:operation soapAction="http://tempuri.org/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument_LastVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetDocument_LastVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDatabase">
+      <soap12:operation soapAction="http://tempuri.org/CreateDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTable">
+      <soap12:operation soapAction="http://tempuri.org/CreateTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateColumn">
+      <soap12:operation soapAction="http://tempuri.org/CreateColumn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertData">
+      <soap12:operation soapAction="http://tempuri.org/InsertData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap12:operation soapAction="http://tempuri.org/UpdateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectByColumnAndWhere">
+      <soap12:operation soapAction="http://tempuri.org/SelectByColumnAndWhere" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllColumnByWhere">
+      <soap12:operation soapAction="http://tempuri.org/SelectAllColumnByWhere" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllByColumn">
+      <soap12:operation soapAction="http://tempuri.org/SelectAllByColumn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAll">
+      <soap12:operation soapAction="http://tempuri.org/SelectAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTable">
+      <soap12:operation soapAction="http://tempuri.org/updateTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLastDocument">
+      <soap12:operation soapAction="http://tempuri.org/SelectLastDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRootCV">
+      <soap12:operation soapAction="http://tempuri.org/getRootCV" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDirctoryInfo">
+      <soap12:operation soapAction="http://tempuri.org/getDirctoryInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDirctoryList">
+      <soap12:operation soapAction="http://tempuri.org/getDirctoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFileList">
+      <soap12:operation soapAction="http://tempuri.org/getFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFileName">
+      <soap12:operation soapAction="http://tempuri.org/getFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transform">
+      <soap12:operation soapAction="http://tempuri.org/Transform" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://localhost/WorkSpaceService/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://localhost/WorkSpaceService/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

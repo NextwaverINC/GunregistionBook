@@ -69,6 +69,18 @@ namespace GRB.Business.Logic
             }
         }
 
+        public static DataTable GetBookByCondition(Int32 BookNo, Int32 BookYear)
+        {
+            try
+            {
+                return GRB_Dat.spGRBGetBookByCondition.ExecuteReader(BookNo, BookYear);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static DataTable GetPage(Int32 BookNo, Int32 PageNo)
         {
             try
@@ -369,13 +381,13 @@ namespace GRB.Business.Logic
 
         public static DataTable GetTblGunReg(Int32 BookNo, Int32 PageNo, Int32 PageVersion, string GunRegID, string GunNo
     , string GunGroup, string GunType, string GunSize, string GunBrand, Int32 GunMaxShot, string GunBarrel, string GunColor
-    , string GunOwner, string GunRegDate)
+    , string GunOwner, string GunRegDate, string GunRemark, string GunCountry)
         {
             try
             {
                 return GRB_Dat.spGBGetTblGunRegistration.ExecuteReader(BookNo, PageNo, PageVersion, GunRegID, GunNo
     , GunGroup, GunType, GunSize, GunBrand, GunMaxShot, GunBarrel, GunColor
-    , GunOwner, GunRegDate);
+    , GunOwner, GunRegDate, GunRemark, GunCountry);
             }
             catch (Exception ex)
             {
@@ -394,5 +406,58 @@ namespace GRB.Business.Logic
                 throw ex;
             }
         }
+
+        public static DataTable GetDataGunSum(string DateBegin, string DateEnd, string pStatus)
+        {
+            try
+            {
+                return GRB_Dat.spGBGetTblDataSum.ExecuteReader(DateBegin, DateEnd, pStatus);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void logUserGun(string UserName, string MenuUse, string UserProcess, bool ProcessResult, string paramsList)
+        {
+            WorkSpace.Service WS = new WorkSpace.Service();
+
+            NextwaverDB.NColumns NCS = new NextwaverDB.NColumns();
+
+            string strResult = "Unsuccess";
+            if (ProcessResult)
+                strResult = "success";
+
+            NCS.Add(new NextwaverDB.NColumn("USERNAME", UserName));
+            NCS.Add(new NextwaverDB.NColumn("MENU", MenuUse));
+            NCS.Add(new NextwaverDB.NColumn("PROCESS", UserProcess));
+            NCS.Add(new NextwaverDB.NColumn("RESULT", strResult));
+            NCS.Add(new NextwaverDB.NColumn("PARAM", paramsList));
+            NCS.Add(new NextwaverDB.NColumn("DATETIME", DateTime.Now.ToString("F")));
+
+            string[] OP = WS.InsertData(Connection, OfficeSpaceId, DatabaseName, "LogUser", NCS.ExportString(), "", "System");
+        }
+
+        public static byte[] getPdf(string strpath)
+        {
+            byte[] bytes = System.IO.File.ReadAllBytes("//" + strHostName + "/" + strpath);
+
+            return bytes;
+        }
+
+        public static bool updatePercentErr(Int32 BookNo, Int32 PageNo, decimal PercentErr)
+        {
+            string strUpdatePercent = "UPDATE Page SET PercentErr = " + PercentErr.ToString("#.##") + " WHERE BookNo = " + BookNo.ToString() + " And PageNo = " + PageNo.ToString();
+            try
+            {
+                return GRB_Dat.DBExecute.ExecuteTextNonQuery(strUpdatePercent);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }
