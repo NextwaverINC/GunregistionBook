@@ -5,3 +5,4 @@ C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.P
 C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.csproj.GenerateResource.Cache
 C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.dll
 C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.pdb
+C:\Users\USER\Desktop\GunregistionBook\GRB.DataAccess\obj\Debug\GRB.DataAccess.csprojResolveAssemblyReference.cache

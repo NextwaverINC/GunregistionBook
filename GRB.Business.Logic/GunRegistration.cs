@@ -459,5 +459,46 @@ namespace GRB.Business.Logic
             }
         }
 
+        public static DataTable countAllData()
+        {
+            string strSelectData = "SELECT [BookAll], [PageAll], [RecodeAll] FROM [GunRegBook].[dbo].[ViewTotal]";
+            try
+            {
+                return GRB_Dat.DBExecute.ExecuteTextQuery(strSelectData);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static DataTable countAllDataByBook()
+        {
+            string strSelectData = "SELECT [BookNo] ,[BookYear] ,[PageTotal] ,[TotalPage] ,[ImgTotal] ,[CountPage] ,[SumRecord]"
+                                    + " FROM [GunRegBook].[dbo].[ViewTotalOfBook] WHERE[SumRecord] IS NOT NULL";
+            try
+            {
+                return GRB_Dat.DBExecute.ExecuteTextQuery(strSelectData);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static DataTable countAllDataByYear()
+        {
+            string strSelectData = "SELECT [BookYear], COUNT([BookNo]) CountBook, SUM([ImgTotal]) SumPage, SUM([SumRecord]) SumRecode"
+                                    +" FROM [GunRegBook].[dbo].[ViewTotalOfBook] WHERE[SumRecord] IS NOT NULL GROUP BY[BookYear] ORDER BY[BookYear]";
+            try
+            {
+                return GRB_Dat.DBExecute.ExecuteTextQuery(strSelectData);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }

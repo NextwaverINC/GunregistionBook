@@ -179,5 +179,24 @@ namespace GRB.WebService
         {
             return GRB_BizLog.GunRegistration.updatePercentErr(BookNo, PageNo, PercentErr);
         }
+
+        [WebMethod]
+        public DataTable countAllData()
+        {
+            return GRB_BizLog.GunRegistration.countAllData();
+        }
+
+        [WebMethod]
+        public DataTable countAllDataByYear()
+        {
+            return GRB_BizLog.GunRegistration.countAllDataByYear();
+        }
+
+        [WebMethod]
+        public DataTable countAllDataByBook()
+        {
+            return GRB_BizLog.GunRegistration.countAllDataByBook();
+        }
+
     }
 }

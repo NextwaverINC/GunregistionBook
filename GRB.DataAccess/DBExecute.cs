@@ -32,6 +32,35 @@ namespace GRB.DataAccess
             finally { DBConnect.Close(); }
         }
 
+        public static DataTable ExecuteTextQuery(string textQuery)
+        {
+            string ResultTableName = "TableData";
+            SqlConnection DBConnect = DBConnection.GetDBConnection();
+
+            SqlCommand DBCommand = new SqlCommand();
+            DBCommand.Connection = DBConnect;
+            DBCommand.CommandType = CommandType.Text;
+            DBCommand.CommandText = textQuery;
+            DBCommand.CommandTimeout = _Command_Timeout;
+            try
+            {
+                SqlDataReader DBReader = default(SqlDataReader);
+                DataTable TableResult = default(DataTable);
+
+                DBConnect.Open();
+                //DBCommand.ExecuteNonQuery();
+                DBReader = DBCommand.ExecuteReader();
+
+                TableResult = new DataTable();
+                TableResult.Load(DBReader);
+                TableResult.TableName = ResultTableName;
+                return TableResult;
+
+            }
+            catch (Exception) { throw; }
+            finally { DBConnect.Close(); }
+        }
+
         public static DataTable ExecuteProcedureReader(string StoreProcedureName, Int32 ReturnColumnTotal, bool ErrorOnNoResult, params SqlParameter[] SqlParameter)
         {
             string ResultTableName = "TableData";

@@ -121,9 +121,7 @@ namespace ConsoleGenBook
 
                             NCS_Encrypt = new EncryptDecrypt.CryptorEngine().Encrypt(NCS_S.ExportString(), true);
                             NWS_Encrypt = new EncryptDecrypt.CryptorEngine().Encrypt(NWS.ExportString(), true);
-
-
-
+                            
                             XmlDocument xDocPage = new XmlDocument();
                             xDocPage.Load(@"tempdoc\Page.xml");
                             AddDataXmlNode(xDocPage, RootPathPage + "/Item[@Name='BookNo']", bookno);
