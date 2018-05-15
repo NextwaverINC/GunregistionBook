@@ -1,0 +1,15 @@
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\log.txt
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\file.txt
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\tempdoc\Book.xml
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\tempdoc\Page.xml
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\ConsoleGenBook.exe.config
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\ConsoleGenBook.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\ConsoleGenBook.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\ConsoleGenBook.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\EncryptDecrypt.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\NextwaverDB.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\bin\Release\NextwaverDB.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\obj\Release\ConsoleGenBook.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\obj\Release\ConsoleGenBook.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\obj\Release\ConsoleGenBook.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleGenBook\obj\Release\ConsoleGenBook.csprojResolveAssemblyReference.cache

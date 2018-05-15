@@ -1,0 +1,11 @@
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\ConsoleUpdateSave.exe.config
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\ConsoleUpdateSave.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\ConsoleUpdateSave.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\ConsoleUpdateSave.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\EncryptDecrypt.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\NextwaverDB.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\bin\Release\NextwaverDB.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\obj\Release\ConsoleUpdateSave.csprojResolveAssemblyReference.cache
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\obj\Release\ConsoleUpdateSave.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\obj\Release\ConsoleUpdateSave.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\ConsoleUpdateSave\obj\Release\ConsoleUpdateSave.XmlSerializers.dll

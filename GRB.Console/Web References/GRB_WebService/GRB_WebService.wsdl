@@ -1,0 +1,1899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAllVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllVersionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBookResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookByCondition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BookYear" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBookByConditionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBookByConditionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPageVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Version" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPageVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPageVersionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImagePage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Version" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImgURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageByte" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImagePageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveImagePageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAuth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UserAuthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserAuthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getimg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pathImg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getimgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getimgResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentImagePage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentImagePageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrentImagePageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImagePage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageVer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImagePageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImagePageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEditImagePage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageVer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEditImagePageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEditImagePageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageVer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTblGunReg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageVersion" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunRegID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunSize" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunBrand" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GunMaxShot" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunBarrel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunColor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunOwner" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunRegDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunRemark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GunCountry" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTblGunRegResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTblGunRegResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGun">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DateBegin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGunResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGunResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGunSum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DateBegin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataGunSumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataGunSumResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunBatBackupfile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="bookno" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunBatBackupfileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RunBatBackupfileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MenuUse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserProcess" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProcessResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="strList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pathPDF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPDFResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePercentErrImg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PercentErr" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updatePercentErrImgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="updatePercentErrImgResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pocess" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateUpdate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertLogResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertImg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertImgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertImgResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reportImgErr">
+        <s:complexType />
+      </s:element>
+      <s:element name="reportImgErrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportImgErrResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="reportLog">
+        <s:complexType />
+      </s:element>
+      <s:element name="reportLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="countAllData">
+        <s:complexType />
+      </s:element>
+      <s:element name="countAllDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countAllDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="countAllDataByYear">
+        <s:complexType />
+      </s:element>
+      <s:element name="countAllDataByYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countAllDataByYearResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="countAllDataByBook">
+        <s:complexType />
+      </s:element>
+      <s:element name="countAllDataByBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="countAllDataByBookResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailPage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BookNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageVer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailPageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailPageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getImgHide">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageVer" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="LineNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getImgHideResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getImgHideResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEditImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="VerNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bin" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveEditImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveEditImageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveToFolder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveToFolderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoveToFolderResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveToFolderByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveToFolderByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoveToFolderByIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolderByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFolderByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFolderByIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLogByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLogByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLogByIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getExpiredBook">
+        <s:complexType />
+      </s:element>
+      <s:element name="getExpiredBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getExpiredBookResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveWaterMask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImgURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageByte" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveWaterMaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveWaterMaskResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getImgOfPrintWaterMask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageNo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="PageVer" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="urlWaterMask" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getImgOfPrintWaterMaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getImgOfPrintWaterMaskResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="API_getRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GunRegID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="API_getRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="API_getRecordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDestroryBook">
+        <s:complexType />
+      </s:element>
+      <s:element name="getDestroryBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDestroryBookResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDestroryByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FolderType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDestroryByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDestroryByIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setWebConfig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_imgPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setWebConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="setWebConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDataWebConfig">
+        <s:complexType />
+      </s:element>
+      <s:element name="getDataWebConfigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDataWebConfigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetAllVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBook" />
+  </wsdl:message>
+  <wsdl:message name="GetBookSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBookByConditionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBookByCondition" />
+  </wsdl:message>
+  <wsdl:message name="GetBookByConditionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBookByConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPage" />
+  </wsdl:message>
+  <wsdl:message name="GetPageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPageVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPageVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetPageVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPageVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveImagePageSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveImagePage" />
+  </wsdl:message>
+  <wsdl:message name="SaveImagePageSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveImagePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="UserAuthSoapIn">
+    <wsdl:part name="parameters" element="tns:UserAuth" />
+  </wsdl:message>
+  <wsdl:message name="UserAuthSoapOut">
+    <wsdl:part name="parameters" element="tns:UserAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="getimgSoapIn">
+    <wsdl:part name="parameters" element="tns:getimg" />
+  </wsdl:message>
+  <wsdl:message name="getimgSoapOut">
+    <wsdl:part name="parameters" element="tns:getimgResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentImagePageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentImagePage" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentImagePageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentImagePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImagePageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImagePage" />
+  </wsdl:message>
+  <wsdl:message name="GetImagePageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImagePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEditImagePageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEditImagePage" />
+  </wsdl:message>
+  <wsdl:message name="GetEditImagePageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEditImagePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetImageUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTblGunRegSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTblGunReg" />
+  </wsdl:message>
+  <wsdl:message name="GetTblGunRegSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTblGunRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGunSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGun" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGunSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGunResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGunSumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataGunSum" />
+  </wsdl:message>
+  <wsdl:message name="GetDataGunSumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataGunSumResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunBatBackupfileSoapIn">
+    <wsdl:part name="parameters" element="tns:RunBatBackupfile" />
+  </wsdl:message>
+  <wsdl:message name="RunBatBackupfileSoapOut">
+    <wsdl:part name="parameters" element="tns:RunBatBackupfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="logUserSoapIn">
+    <wsdl:part name="parameters" element="tns:logUser" />
+  </wsdl:message>
+  <wsdl:message name="logUserSoapOut">
+    <wsdl:part name="parameters" element="tns:logUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPDFSoapIn">
+    <wsdl:part name="parameters" element="tns:getPDF" />
+  </wsdl:message>
+  <wsdl:message name="getPDFSoapOut">
+    <wsdl:part name="parameters" element="tns:getPDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="updatePercentErrImgSoapIn">
+    <wsdl:part name="parameters" element="tns:updatePercentErrImg" />
+  </wsdl:message>
+  <wsdl:message name="updatePercentErrImgSoapOut">
+    <wsdl:part name="parameters" element="tns:updatePercentErrImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertLogSoapIn">
+    <wsdl:part name="parameters" element="tns:insertLog" />
+  </wsdl:message>
+  <wsdl:message name="insertLogSoapOut">
+    <wsdl:part name="parameters" element="tns:insertLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertImgSoapIn">
+    <wsdl:part name="parameters" element="tns:insertImg" />
+  </wsdl:message>
+  <wsdl:message name="insertImgSoapOut">
+    <wsdl:part name="parameters" element="tns:insertImgResponse" />
+  </wsdl:message>
+  <wsdl:message name="reportImgErrSoapIn">
+    <wsdl:part name="parameters" element="tns:reportImgErr" />
+  </wsdl:message>
+  <wsdl:message name="reportImgErrSoapOut">
+    <wsdl:part name="parameters" element="tns:reportImgErrResponse" />
+  </wsdl:message>
+  <wsdl:message name="reportLogSoapIn">
+    <wsdl:part name="parameters" element="tns:reportLog" />
+  </wsdl:message>
+  <wsdl:message name="reportLogSoapOut">
+    <wsdl:part name="parameters" element="tns:reportLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="countAllDataSoapIn">
+    <wsdl:part name="parameters" element="tns:countAllData" />
+  </wsdl:message>
+  <wsdl:message name="countAllDataSoapOut">
+    <wsdl:part name="parameters" element="tns:countAllDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="countAllDataByYearSoapIn">
+    <wsdl:part name="parameters" element="tns:countAllDataByYear" />
+  </wsdl:message>
+  <wsdl:message name="countAllDataByYearSoapOut">
+    <wsdl:part name="parameters" element="tns:countAllDataByYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="countAllDataByBookSoapIn">
+    <wsdl:part name="parameters" element="tns:countAllDataByBook" />
+  </wsdl:message>
+  <wsdl:message name="countAllDataByBookSoapOut">
+    <wsdl:part name="parameters" element="tns:countAllDataByBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailPage" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailPageResponse" />
+  </wsdl:message>
+  <wsdl:message name="getImgHideSoapIn">
+    <wsdl:part name="parameters" element="tns:getImgHide" />
+  </wsdl:message>
+  <wsdl:message name="getImgHideSoapOut">
+    <wsdl:part name="parameters" element="tns:getImgHideResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveEditImageSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveEditImage" />
+  </wsdl:message>
+  <wsdl:message name="SaveEditImageSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveEditImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveToFolderSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveToFolder" />
+  </wsdl:message>
+  <wsdl:message name="MoveToFolderSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveToFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveToFolderByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveToFolderByID" />
+  </wsdl:message>
+  <wsdl:message name="MoveToFolderByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveToFolderByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFolderByID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFolderByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFolderByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLogByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLogByID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLogByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLogByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getExpiredBookSoapIn">
+    <wsdl:part name="parameters" element="tns:getExpiredBook" />
+  </wsdl:message>
+  <wsdl:message name="getExpiredBookSoapOut">
+    <wsdl:part name="parameters" element="tns:getExpiredBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveWaterMaskSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveWaterMask" />
+  </wsdl:message>
+  <wsdl:message name="SaveWaterMaskSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveWaterMaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="getImgOfPrintWaterMaskSoapIn">
+    <wsdl:part name="parameters" element="tns:getImgOfPrintWaterMask" />
+  </wsdl:message>
+  <wsdl:message name="getImgOfPrintWaterMaskSoapOut">
+    <wsdl:part name="parameters" element="tns:getImgOfPrintWaterMaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="API_getRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:API_getRecord" />
+  </wsdl:message>
+  <wsdl:message name="API_getRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:API_getRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDestroryBookSoapIn">
+    <wsdl:part name="parameters" element="tns:getDestroryBook" />
+  </wsdl:message>
+  <wsdl:message name="getDestroryBookSoapOut">
+    <wsdl:part name="parameters" element="tns:getDestroryBookResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDestroryByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDestroryByID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDestroryByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDestroryByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="setWebConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:setWebConfig" />
+  </wsdl:message>
+  <wsdl:message name="setWebConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:setWebConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDataWebConfigSoapIn">
+    <wsdl:part name="parameters" element="tns:getDataWebConfig" />
+  </wsdl:message>
+  <wsdl:message name="getDataWebConfigSoapOut">
+    <wsdl:part name="parameters" element="tns:getDataWebConfigResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GRB_WebServiceSoap">
+    <wsdl:operation name="GetAllVersion">
+      <wsdl:input message="tns:GetAllVersionSoapIn" />
+      <wsdl:output message="tns:GetAllVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBook">
+      <wsdl:input message="tns:GetBookSoapIn" />
+      <wsdl:output message="tns:GetBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBookByCondition">
+      <wsdl:input message="tns:GetBookByConditionSoapIn" />
+      <wsdl:output message="tns:GetBookByConditionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPage">
+      <wsdl:input message="tns:GetPageSoapIn" />
+      <wsdl:output message="tns:GetPageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageVersion">
+      <wsdl:input message="tns:GetPageVersionSoapIn" />
+      <wsdl:output message="tns:GetPageVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImagePage">
+      <wsdl:input message="tns:SaveImagePageSoapIn" />
+      <wsdl:output message="tns:SaveImagePageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UserAuth">
+      <wsdl:input message="tns:UserAuthSoapIn" />
+      <wsdl:output message="tns:UserAuthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getimg">
+      <wsdl:input message="tns:getimgSoapIn" />
+      <wsdl:output message="tns:getimgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentImagePage">
+      <wsdl:input message="tns:GetCurrentImagePageSoapIn" />
+      <wsdl:output message="tns:GetCurrentImagePageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImagePage">
+      <wsdl:input message="tns:GetImagePageSoapIn" />
+      <wsdl:output message="tns:GetImagePageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEditImagePage">
+      <wsdl:input message="tns:GetEditImagePageSoapIn" />
+      <wsdl:output message="tns:GetEditImagePageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageUrl">
+      <wsdl:input message="tns:GetImageUrlSoapIn" />
+      <wsdl:output message="tns:GetImageUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTblGunReg">
+      <wsdl:input message="tns:GetTblGunRegSoapIn" />
+      <wsdl:output message="tns:GetTblGunRegSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGun">
+      <wsdl:input message="tns:GetDataGunSoapIn" />
+      <wsdl:output message="tns:GetDataGunSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGunSum">
+      <wsdl:input message="tns:GetDataGunSumSoapIn" />
+      <wsdl:output message="tns:GetDataGunSumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunBatBackupfile">
+      <wsdl:input message="tns:RunBatBackupfileSoapIn" />
+      <wsdl:output message="tns:RunBatBackupfileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logUser">
+      <wsdl:input message="tns:logUserSoapIn" />
+      <wsdl:output message="tns:logUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPDF">
+      <wsdl:input message="tns:getPDFSoapIn" />
+      <wsdl:output message="tns:getPDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updatePercentErrImg">
+      <wsdl:input message="tns:updatePercentErrImgSoapIn" />
+      <wsdl:output message="tns:updatePercentErrImgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLog">
+      <wsdl:input message="tns:insertLogSoapIn" />
+      <wsdl:output message="tns:insertLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertImg">
+      <wsdl:input message="tns:insertImgSoapIn" />
+      <wsdl:output message="tns:insertImgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reportImgErr">
+      <wsdl:input message="tns:reportImgErrSoapIn" />
+      <wsdl:output message="tns:reportImgErrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="reportLog">
+      <wsdl:input message="tns:reportLogSoapIn" />
+      <wsdl:output message="tns:reportLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="countAllData">
+      <wsdl:input message="tns:countAllDataSoapIn" />
+      <wsdl:output message="tns:countAllDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="countAllDataByYear">
+      <wsdl:input message="tns:countAllDataByYearSoapIn" />
+      <wsdl:output message="tns:countAllDataByYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="countAllDataByBook">
+      <wsdl:input message="tns:countAllDataByBookSoapIn" />
+      <wsdl:output message="tns:countAllDataByBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPage">
+      <wsdl:input message="tns:GetDetailPageSoapIn" />
+      <wsdl:output message="tns:GetDetailPageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getImgHide">
+      <wsdl:input message="tns:getImgHideSoapIn" />
+      <wsdl:output message="tns:getImgHideSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditImage">
+      <wsdl:input message="tns:SaveEditImageSoapIn" />
+      <wsdl:output message="tns:SaveEditImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveToFolder">
+      <wsdl:input message="tns:MoveToFolderSoapIn" />
+      <wsdl:output message="tns:MoveToFolderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveToFolderByID">
+      <wsdl:input message="tns:MoveToFolderByIDSoapIn" />
+      <wsdl:output message="tns:MoveToFolderByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderByID">
+      <wsdl:input message="tns:DeleteFolderByIDSoapIn" />
+      <wsdl:output message="tns:DeleteFolderByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLogByID">
+      <wsdl:input message="tns:DeleteLogByIDSoapIn" />
+      <wsdl:output message="tns:DeleteLogByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExpiredBook">
+      <wsdl:input message="tns:getExpiredBookSoapIn" />
+      <wsdl:output message="tns:getExpiredBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWaterMask">
+      <wsdl:input message="tns:SaveWaterMaskSoapIn" />
+      <wsdl:output message="tns:SaveWaterMaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getImgOfPrintWaterMask">
+      <wsdl:input message="tns:getImgOfPrintWaterMaskSoapIn" />
+      <wsdl:output message="tns:getImgOfPrintWaterMaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="API_getRecord">
+      <wsdl:input message="tns:API_getRecordSoapIn" />
+      <wsdl:output message="tns:API_getRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDestroryBook">
+      <wsdl:input message="tns:getDestroryBookSoapIn" />
+      <wsdl:output message="tns:getDestroryBookSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDestroryByID">
+      <wsdl:input message="tns:DeleteDestroryByIDSoapIn" />
+      <wsdl:output message="tns:DeleteDestroryByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setWebConfig">
+      <wsdl:input message="tns:setWebConfigSoapIn" />
+      <wsdl:output message="tns:setWebConfigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDataWebConfig">
+      <wsdl:input message="tns:getDataWebConfigSoapIn" />
+      <wsdl:output message="tns:getDataWebConfigSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GRB_WebServiceSoap" type="tns:GRB_WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllVersion">
+      <soap:operation soapAction="http://tempuri.org/GetAllVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBook">
+      <soap:operation soapAction="http://tempuri.org/GetBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookByCondition">
+      <soap:operation soapAction="http://tempuri.org/GetBookByCondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPage">
+      <soap:operation soapAction="http://tempuri.org/GetPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageVersion">
+      <soap:operation soapAction="http://tempuri.org/GetPageVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImagePage">
+      <soap:operation soapAction="http://tempuri.org/SaveImagePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAuth">
+      <soap:operation soapAction="http://tempuri.org/UserAuth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getimg">
+      <soap:operation soapAction="http://tempuri.org/getimg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentImagePage">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentImagePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImagePage">
+      <soap:operation soapAction="http://tempuri.org/GetImagePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditImagePage">
+      <soap:operation soapAction="http://tempuri.org/GetEditImagePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageUrl">
+      <soap:operation soapAction="http://tempuri.org/GetImageUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTblGunReg">
+      <soap:operation soapAction="http://tempuri.org/GetTblGunReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGun">
+      <soap:operation soapAction="http://tempuri.org/GetDataGun" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGunSum">
+      <soap:operation soapAction="http://tempuri.org/GetDataGunSum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunBatBackupfile">
+      <soap:operation soapAction="http://tempuri.org/RunBatBackupfile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logUser">
+      <soap:operation soapAction="http://tempuri.org/logUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPDF">
+      <soap:operation soapAction="http://tempuri.org/getPDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePercentErrImg">
+      <soap:operation soapAction="http://tempuri.org/updatePercentErrImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLog">
+      <soap:operation soapAction="http://tempuri.org/insertLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertImg">
+      <soap:operation soapAction="http://tempuri.org/insertImg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportImgErr">
+      <soap:operation soapAction="http://tempuri.org/reportImgErr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportLog">
+      <soap:operation soapAction="http://tempuri.org/reportLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countAllData">
+      <soap:operation soapAction="http://tempuri.org/countAllData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countAllDataByYear">
+      <soap:operation soapAction="http://tempuri.org/countAllDataByYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countAllDataByBook">
+      <soap:operation soapAction="http://tempuri.org/countAllDataByBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPage">
+      <soap:operation soapAction="http://tempuri.org/GetDetailPage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImgHide">
+      <soap:operation soapAction="http://tempuri.org/getImgHide" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditImage">
+      <soap:operation soapAction="http://tempuri.org/SaveEditImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveToFolder">
+      <soap:operation soapAction="http://tempuri.org/MoveToFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveToFolderByID">
+      <soap:operation soapAction="http://tempuri.org/MoveToFolderByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderByID">
+      <soap:operation soapAction="http://tempuri.org/DeleteFolderByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLogByID">
+      <soap:operation soapAction="http://tempuri.org/DeleteLogByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExpiredBook">
+      <soap:operation soapAction="http://tempuri.org/getExpiredBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWaterMask">
+      <soap:operation soapAction="http://tempuri.org/SaveWaterMask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImgOfPrintWaterMask">
+      <soap:operation soapAction="http://tempuri.org/getImgOfPrintWaterMask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="API_getRecord">
+      <soap:operation soapAction="http://tempuri.org/API_getRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDestroryBook">
+      <soap:operation soapAction="http://tempuri.org/getDestroryBook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDestroryByID">
+      <soap:operation soapAction="http://tempuri.org/DeleteDestroryByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setWebConfig">
+      <soap:operation soapAction="http://tempuri.org/setWebConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataWebConfig">
+      <soap:operation soapAction="http://tempuri.org/getDataWebConfig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GRB_WebServiceSoap12" type="tns:GRB_WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetAllVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBook">
+      <soap12:operation soapAction="http://tempuri.org/GetBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBookByCondition">
+      <soap12:operation soapAction="http://tempuri.org/GetBookByCondition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPage">
+      <soap12:operation soapAction="http://tempuri.org/GetPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetPageVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImagePage">
+      <soap12:operation soapAction="http://tempuri.org/SaveImagePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserAuth">
+      <soap12:operation soapAction="http://tempuri.org/UserAuth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getimg">
+      <soap12:operation soapAction="http://tempuri.org/getimg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentImagePage">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentImagePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImagePage">
+      <soap12:operation soapAction="http://tempuri.org/GetImagePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEditImagePage">
+      <soap12:operation soapAction="http://tempuri.org/GetEditImagePage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageUrl">
+      <soap12:operation soapAction="http://tempuri.org/GetImageUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTblGunReg">
+      <soap12:operation soapAction="http://tempuri.org/GetTblGunReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGun">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGun" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataGunSum">
+      <soap12:operation soapAction="http://tempuri.org/GetDataGunSum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunBatBackupfile">
+      <soap12:operation soapAction="http://tempuri.org/RunBatBackupfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logUser">
+      <soap12:operation soapAction="http://tempuri.org/logUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPDF">
+      <soap12:operation soapAction="http://tempuri.org/getPDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePercentErrImg">
+      <soap12:operation soapAction="http://tempuri.org/updatePercentErrImg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLog">
+      <soap12:operation soapAction="http://tempuri.org/insertLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertImg">
+      <soap12:operation soapAction="http://tempuri.org/insertImg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportImgErr">
+      <soap12:operation soapAction="http://tempuri.org/reportImgErr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reportLog">
+      <soap12:operation soapAction="http://tempuri.org/reportLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countAllData">
+      <soap12:operation soapAction="http://tempuri.org/countAllData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countAllDataByYear">
+      <soap12:operation soapAction="http://tempuri.org/countAllDataByYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="countAllDataByBook">
+      <soap12:operation soapAction="http://tempuri.org/countAllDataByBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPage">
+      <soap12:operation soapAction="http://tempuri.org/GetDetailPage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImgHide">
+      <soap12:operation soapAction="http://tempuri.org/getImgHide" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveEditImage">
+      <soap12:operation soapAction="http://tempuri.org/SaveEditImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveToFolder">
+      <soap12:operation soapAction="http://tempuri.org/MoveToFolder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveToFolderByID">
+      <soap12:operation soapAction="http://tempuri.org/MoveToFolderByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderByID">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFolderByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLogByID">
+      <soap12:operation soapAction="http://tempuri.org/DeleteLogByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExpiredBook">
+      <soap12:operation soapAction="http://tempuri.org/getExpiredBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWaterMask">
+      <soap12:operation soapAction="http://tempuri.org/SaveWaterMask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImgOfPrintWaterMask">
+      <soap12:operation soapAction="http://tempuri.org/getImgOfPrintWaterMask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="API_getRecord">
+      <soap12:operation soapAction="http://tempuri.org/API_getRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDestroryBook">
+      <soap12:operation soapAction="http://tempuri.org/getDestroryBook" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDestroryByID">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDestroryByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setWebConfig">
+      <soap12:operation soapAction="http://tempuri.org/setWebConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataWebConfig">
+      <soap12:operation soapAction="http://tempuri.org/getDataWebConfig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GRB_WebService">
+    <wsdl:port name="GRB_WebServiceSoap" binding="tns:GRB_WebServiceSoap">
+      <soap:address location="http://localhost/GRBServices_ws/GRB_WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GRB_WebServiceSoap12" binding="tns:GRB_WebServiceSoap12">
+      <soap12:address location="http://localhost/GRBServices_ws/GRB_WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

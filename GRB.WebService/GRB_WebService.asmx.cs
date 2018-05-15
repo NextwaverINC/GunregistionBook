@@ -20,6 +20,13 @@ namespace GRB.WebService
     // [System.Web.Script.Services.ScriptService]
     public class GRB_WebService : System.Web.Services.WebService
     {
+        //
+        [WebMethod]
+        public DataTable GetAllVersion(Int32 BookNo, Int32 PageNo)
+        {
+            return GRB_BizLog.GunRegistration.getAllVersion(BookNo, PageNo);
+        }
+
         [WebMethod]
         public DataTable GetBook(Int32 BookNo)
         {
@@ -98,11 +105,22 @@ namespace GRB.WebService
         {
             return GRB_BizLog.GunRegistration.getimg(BookNo, PageNo);
         }
-
+        //getEditimg
         [WebMethod]
         public byte[] GetImagePage(Int32 BookNo, Int32 PageNo, Int32 PageVer)
         {
             return GRB_BizLog.GunRegistration.getimg(BookNo, PageNo, PageVer);
+        }
+        [WebMethod]
+        public byte[] GetEditImagePage(Int32 BookNo, Int32 PageNo, Int32 PageVer)
+        {
+            return GRB_BizLog.GunRegistration.getEditimg(BookNo, PageNo, PageVer);
+        }
+
+        [WebMethod]
+        public string GetImageUrl(Int32 BookNo, Int32 PageNo, Int32 PageVer)
+        {
+            return GRB_BizLog.GunRegistration.getimgURL(BookNo, PageNo, PageVer);
         }
 
         public bool EditPathImg(int bookno)
@@ -113,11 +131,11 @@ namespace GRB.WebService
         [WebMethod]
         public DataTable GetTblGunReg(Int32 BookNo, Int32 PageNo, Int32 PageVersion, string GunRegID, string GunNo
         , string GunGroup, string GunType, string GunSize, string GunBrand, Int32 GunMaxShot, string GunBarrel, string GunColor
-        , string GunOwner, string GunRegDate, string GunRemark, string GunCountry)
+        , string GunOwner, string GunRegDate, string GunRemark, string GunCountry, int GunIdOnly)
         {
             return GRB_BizLog.GunRegistration.GetTblGunReg(BookNo, PageNo, PageVersion, GunRegID, GunNo
     , GunGroup, GunType, GunSize, GunBrand, GunMaxShot, GunBarrel, GunColor
-    , GunOwner, GunRegDate, GunRemark, GunCountry);
+    , GunOwner, GunRegDate, GunRemark, GunCountry, GunIdOnly);
         }
 
         [WebMethod]
@@ -181,6 +199,30 @@ namespace GRB.WebService
         }
 
         [WebMethod]
+        public bool insertLog(string UserName, string Pocess, string Detail, string DateUpdate)
+        {
+            return GRB_BizLog.GunRegistration.insertLog(UserName, Pocess, Detail, DateUpdate);
+        }
+
+        [WebMethod]
+        public bool insertImg(Int32 BookNo, Int32 PageNo, string Detail)
+        {
+            return GRB_BizLog.GunRegistration.insertImg(BookNo, PageNo, Detail);
+        }
+
+        [WebMethod]
+        public DataTable reportImgErr()
+        {
+            return GRB_BizLog.GunRegistration.reportImgErr();
+        }
+
+        [WebMethod]
+        public DataTable reportLog()
+        {
+            return GRB_BizLog.GunRegistration.reportLog();
+        }
+
+        [WebMethod]
         public DataTable countAllData()
         {
             return GRB_BizLog.GunRegistration.countAllData();
@@ -198,5 +240,106 @@ namespace GRB.WebService
             return GRB_BizLog.GunRegistration.countAllDataByBook();
         }
 
+        #region GetImageHide
+        [WebMethod]
+        public DataTable GetDetailPage(string BookNo, string PageNo, string PageVer)
+        {
+            return GRB_BizLog.GunRegistration.getDetailPage(BookNo, PageNo, PageVer);
+        }
+
+        [WebMethod]
+        public byte[] getImgHide(Int32 BookNo, Int32 PageNo, Int32 PageVer, string LineNo)
+        {
+            return GRB_BizLog.GunRegistration.getImgHide(BookNo, PageNo, PageVer, LineNo);
+        }
+        #endregion
+
+        [WebMethod]
+        public bool SaveEditImage(Int32 BookNo, Int32 PageNo, Int32 VerNo, byte[] bin)
+        {
+            return GRB_BizLog.GunRegistration.SaveEditImage(BookNo, PageNo, VerNo, bin);
+        }
+        //SaveEditImage(Int32 BookNo, Int32 PageNo, Int32 VerNo, byte[] bin)
+
+        [WebMethod]
+        public bool MoveToFolder(Int32 BookNo,string FolderType)
+        {
+            return GRB_BizLog.GunRegistration.getDetailBook(BookNo, FolderType);
+        }
+
+        [WebMethod]
+        public bool MoveToFolderByID(Int32 ID, string FolderType)
+        {
+            return GRB_BizLog.GunRegistration.getDetailBook_ByID(ID, FolderType);
+        }
+
+        [WebMethod]
+        public bool DeleteFolderByID(Int32 ID, string FolderType)
+        {
+            return GRB_BizLog.GunRegistration.getReBook_ByID(ID, FolderType);
+        }
+        [WebMethod]
+        public bool DeleteLogByID(string ID)
+        {
+            return GRB_BizLog.GunRegistration.deleteLog(ID);
+        }
+
+        [WebMethod]
+        public DataTable getExpiredBook()
+        {
+            return GRB_BizLog.GunRegistration.getExpired_Book();
+        }
+
+        #region SaveWaterMask
+        [WebMethod]
+        public bool SaveWaterMask(string ImgURL, byte[] imageByte)
+        {
+
+            GRB_BizLog.GunRegistration.SaveWaterMask(ImgURL, imageByte);
+            return true;
+        }
+        [WebMethod]
+        public byte[] getImgOfPrintWaterMask(Int32 BookNo, Int32 PageNo, Int32 PageVer, string urlWaterMask)
+        {
+            return GRB_BizLog.GunRegistration.getImgOfPrintWaterMask(BookNo, PageNo, PageVer, urlWaterMask);
+        }
+        #endregion
+
+        #region API
+        [WebMethod]
+        public DataTable API_getRecord(string GunRegID)
+        {
+            return GRB_BizLog.GunRegistration.API_getRecord(GunRegID);
+        }
+        #endregion
+
+        #region DESTRORY
+        [WebMethod]
+        public DataTable getDestroryBook()
+        {
+            return GRB_BizLog.GunRegistration.getDestroryBook();
+        }
+
+
+        [WebMethod]
+        public bool DeleteDestroryByID(Int32 ID, string FolderType)
+        {
+            return GRB_BizLog.GunRegistration.DeleteDestroryByID(ID, FolderType);
+        }
+        #endregion
+
+
+        #region WebConfig
+        [WebMethod]
+        public string setWebConfig(string _imgPath)
+        {
+            return GRB_BizLog.GunRegistration.setWebConfig(_imgPath);
+        }
+        [WebMethod]
+        public string getDataWebConfig()
+        {
+            return GRB_BizLog.GunRegistration.getDataWebConfig();
+        }
+        #endregion
     }
 }

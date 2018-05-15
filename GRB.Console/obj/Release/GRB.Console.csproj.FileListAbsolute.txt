@@ -1,0 +1,17 @@
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\logBackUp\logDateBackup.txt
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\GRB.Console.exe.config
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\GRB.Console.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\GRB.Console.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\PdfSharp.Charting.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\PdfSharp.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\PdfSharp.xml
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\PdfSharp.Charting.xml
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\de\PdfSharp.resources.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\de\PdfSharp.Charting.resources.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\obj\Release\GRB.Console.csprojResolveAssemblyReference.cache
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\obj\Release\GRB.Console.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\obj\Release\GRB.Console.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\GRB.Console.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\EncryptDecrypt.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\bin\Release\NextwaverDB.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\GRB.Console\obj\Release\GRB.Console.XmlSerializers.dll
