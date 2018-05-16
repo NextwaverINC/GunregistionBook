@@ -1,0 +1,12 @@
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\file.txt
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\AddOwner.exe.config
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\AddOwner.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\AddOwner.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\AddOwner.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\EncryptDecrypt.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\NextwaverDB.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\bin\Release\NextwaverDB.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\obj\Release\AddOwner.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\obj\Release\AddOwner.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\obj\Release\AddOwner.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\AddOwner\obj\Release\AddOwner.csprojResolveAssemblyReference.cache

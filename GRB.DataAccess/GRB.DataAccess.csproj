@@ -55,6 +55,7 @@
     <Compile Include="spGBGetTblDataSum.cs" />
     <Compile Include="spGBGetTblData.cs" />
     <Compile Include="spGBGetTblGunRegistration.cs" />
+    <Compile Include="spGRBCreateLog.cs" />
     <Compile Include="spGRBGetBookByCondition.cs" />
     <Compile Include="spGRBGetBook.cs" />
     <Compile Include="spGRBGetPageVer.cs" />

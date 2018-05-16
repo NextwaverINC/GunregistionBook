@@ -1,0 +1,13 @@
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\BookEdit.txt
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\Log.txt
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\InsertIDGUN.exe.config
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\InsertIDGUN.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\InsertIDGUN.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\InsertIDGUN.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\EncryptDecrypt.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\NextwaverDB.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\bin\Release\NextwaverDB.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\obj\Release\InsertIDGUN.exe
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\obj\Release\InsertIDGUN.pdb
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\obj\Release\InsertIDGUN.XmlSerializers.dll
+C:\Users\WINDOWS\Desktop\GunregistionBook\GunregistionBook\InsertIDGUN\obj\Release\InsertIDGUN.csprojResolveAssemblyReference.cache

@@ -28,6 +28,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3A60DB65-BB5
 		..\reggun_new.rar = ..\reggun_new.rar
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateBookGroup", "UpdateBookGroup\UpdateBookGroup.csproj", "{8E5B2D7F-2D15-4DB0-AE2B-F5B04F61AD3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{3BB1ED6C-BE47-411B-8E63-607FB4B2F20A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BB1ED6C-BE47-411B-8E63-607FB4B2F20A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BB1ED6C-BE47-411B-8E63-607FB4B2F20A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E5B2D7F-2D15-4DB0-AE2B-F5B04F61AD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E5B2D7F-2D15-4DB0-AE2B-F5B04F61AD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E5B2D7F-2D15-4DB0-AE2B-F5B04F61AD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E5B2D7F-2D15-4DB0-AE2B-F5B04F61AD3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -34,6 +34,15 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
     <Reference Include="EncryptDecrypt">
       <HintPath>..\DLL\EncryptDecrypt.dll</HintPath>
     </Reference>
@@ -75,6 +84,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,6 +130,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\WorkSpace\service.disco" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="MaskImage\R-01.png" />
+    <Content Include="MaskImage\R-02.png" />
+    <Content Include="MaskImage\R-03.png" />
+    <Content Include="MaskImage\R-04.png" />
+    <Content Include="MaskImage\R-05.png" />
+    <Content Include="MaskImage\R-06.png" />
+    <Content Include="MaskImage\R-07.png" />
+    <Content Include="MaskImage\R-08.png" />
+    <Content Include="MaskImage\R-09.png" />
+    <Content Include="MaskImage\R-10.png" />
+    <Content Include="MaskImage\R-11.png" />
+    <Content Include="MaskImage\R-12.png" />
+    <Content Include="MaskImage\R-13.png" />
+    <Content Include="MaskImage\R-14.png" />
+    <Content Include="MaskImage\R-15.png" />
+    <Content Include="MaskImage\R-16.png" />
+    <Content Include="MaskImage\R-17.png" />
+    <Content Include="MaskImage\R-18.png" />
+    <Content Include="MaskImage\R-19.png" />
+    <Content Include="MaskImage\R-20.png" />
+    <Content Include="MaskImage\R-21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
